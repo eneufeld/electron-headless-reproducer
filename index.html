@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Hello World!</title>
+  </head>
+  <body>
+    <h1>Hello World!</h1>
+    <input type="text" placeholder="Normal input" style="width: 100%;"/>
+    <textarea style="display: block;width: 100%;" id="keylistener" placeholder="This listens to keyDown events and updates the div below."></textarea>
+    <div id="update" style="border: 1px solid; min-height: 200px;width: 100%;"></div>
+    <script>
+        const inputElement = document.getElementById('keylistener');
+        const divElement = document.getElementById('update');
+
+        inputElement.addEventListener('keydown', function(event) {
+            console.log('Key pressed:', event.key);
+            divElement.innerHTML += event.key;
+        });
+    </script>
+  </body>
+</html>
